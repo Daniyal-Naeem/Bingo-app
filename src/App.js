@@ -1,8 +1,7 @@
-import './App.css';
-
-function App() {
+import MainScreen from "./MainScreen";
+const App = () => {
   return (
-  <div>Bingo</div>
+ <MainScreen/>
   );
 }
 
