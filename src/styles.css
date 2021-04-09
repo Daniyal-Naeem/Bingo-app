@@ -3,8 +3,6 @@
   text-align: center;
 }
 
-
-
 .wrapper {
   display: grid;
   grid-gap: 5px;
@@ -21,8 +19,8 @@
   font-weight: bold;
   font-size: 20px;
 
-  border: 2px rgb(4, 123, 235) solid;
-  border-radius: 5px;
+  border: 2px rgb(0, 0, 0) solid;
+  
 
   cursor: pointer;
 }
@@ -45,3 +43,6 @@ canvas {
 
   pointer-events: none;
 }
+
+
+

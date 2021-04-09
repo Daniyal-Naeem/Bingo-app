@@ -1,4 +1,5 @@
-export function start() {
+  
+export const start = () => {
   let W = window.innerWidth;
   let H = window.innerHeight;
   const canvas = document.getElementById("canvas");

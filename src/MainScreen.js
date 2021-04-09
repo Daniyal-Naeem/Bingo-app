@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import shuffle from "shuffle-array";
-
 import "./styles.css";
 
-import { start } from "./Confetti";
+import {start}  from "./Confetti";
 
-function Confetti() {
+const Confetti = () => {
   useEffect(() => {
     start();
   });
   return <canvas id="canvas" />;
 }
-
-function Tile({ id, children, onToggle, isSet }) {
+const Tile = ({ id, children, onToggle, isSet }) => {
   return (
     <div onClick={onToggle} className={`tile ${isSet ? "tile--set" : ""}`}>
       {children}
@@ -20,35 +18,35 @@ function Tile({ id, children, onToggle, isSet }) {
   );
 }
 
-const bbb = [
-  "Great success",
-  "User engagement",
-  "Kodiak",
-  "Huge kudos to X",
-  "Suboptimal",
-  "Learning experience ",
-  "Personalized learning",
-  "Super excited ",
-  "Funnel",
-  "OKRs",
-  "Highest company priority ",
+const message = [
+  "didn't slept lastnight",
+  "not going to school",
+  "Van has arrive",
+  "having stomach pain",
+  "forgot my book at home",
+  "forgot to bring lunch",
+  "monthly test",
+  "exams ",
+  "preparation for the tst",
+  "going washroom",
+  "punishment",
   "It’s only a test",
-  "Operate like a startup",
-  "Keeping the momentum",
-  "The results look promising",
-  "Initial signals",
+  "bunking the class",
+  "fake attandance ",
+  "assembly",
+  "prayer",
   "Can’t wait to share results ",
-  "Significant increase ",
+  "Good grades ",
   "High quality content",
-  "Keep product consistent ",
-  "Data driven ",
-  "Glorious X team",
-  "Allocate resources ",
-  "Alignment between X and Y",
-  "Happy to announce"
+  "fail ",
+  "pass ",
+  "front roll",
+  "playing sports",
+  "late",
+  "absent"
 ];
 
-const data = shuffle(bbb).reduce(
+const data = shuffle(message).reduce(
   (data, value, index) => ({ ...data, [index]: value }),
   {}
 );
@@ -92,7 +90,7 @@ const MainScreen = () => {
           </Tile>
         ))}
       </div>
-      {state.won ? <Confetti /> : null}
+      {state.won ? <Confetti/> : null}
     </div>
   );
 }
